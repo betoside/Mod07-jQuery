@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 3.6.0</title>
+</head>
+<body>
+
+    <pre>
+        Módulo 7: jQuery
+        Mod07-jQuery
+
+        58 aulas
+
+        #1: O que é jQuery
+        #2: Como o jQuery funciona?
+            https://cdnjs.com/libraries/jquery
+
+        #3: $ ou $()
+            
+            $.acao
+            jQuery.acao
+            
+            $(elemento).acao
+
+        #4: $(document).ready()
+
+            "body onload='nomeFuncao();'"
+
+            window.onload = function(){
+                ...
+            }
+
+            $( document ).ready(function(){
+                console.log('blablabla 1');
+            });
+
+            $(function(){
+                console.log('blablabla 2');
+            });
+
+
+        #5: Evitando conflito
+            
+            var $j = jQuery.noConflict();
+
+            jQuery(document).ready(function(){
+                console.log("funcionando nativamente")
+            });
+
+
+        #6: Selecionando Elementos do HTML
+        #7: Manipulando Atributos de Tag
+        #8: O que fazer após a seleção?
+        #9: Manipulando Elementos
+        #10: Transformando Elementos em Objetos
+        #11: Navegando Entre Elementos
+        #12: CSS, Styling e Dimensões
+        #13: Guardando dados em um elemento
+        #14: Métodos do dia-a-dia
+        #15: FAQ: Como saber se um elemento existe?
+        #16: FAQ: Saber se elemento tem uma classe
+        #17: FAQ: Ativar/Desativar um elemento de form
+        #18: FAQ: Pegar item selecionado de SELECT
+        #19: FAQ: Alterar 3o elemento de lista
+        #20: FAQ: Pegar elemento nativo
+        #21: O que é um Evento?
+        #22: Definindo Eventos em Elementos DOM
+        #23: Eventos Auxiliadores
+        #24: Removendo Eventos
+        #25: Acionamento Falso de Eventos
+        #26: Propriedades padrão do evento
+        #27: Eventos de Browser
+        #28: Eventos de Formulário
+        #29: Eventos de Teclado
+        #30: Eventos de Mouse
+        #31: O que são Efeitos?
+        #32: Elemento aparecer/desaparecer
+        #33: Efeitos de Fade
+        #34: Efeitos de Deslizamento (Slide)
+        #35: Animações: Como usar o Animate
+        #36: Animações: Eventos no Animate
+        #37: FAQ: Como parar uma animação no meio?
+        #38: FAQ: Somar propriedades na animação
+        #39: O que é AJAX?
+        #40: Conceitos importantes de AJAX
+        #41: Monitorar Requisições AJAX
+        #42: Método Auxiliares de Ajax
+        #43: Método Serialize
+        #44: Requisição Ajax Completa
+        #45: Recebendo e manipulando JSON
+        #46: O que são Plugins?
+        #47: Como usar um Plugin jQuery?
+        #48: Como criar seu próprio Plugin jQuery?
+        #49: Projeto: Calculadora de IMC
+        #50: Projeto: Menu Dropdown
+        #51: Projeto: Selecionador de Data
+        #52: Projeto: Menu Apple (Fisheye)
+        #53: Projeto: Jogo Estoure a Bolha
+        #54: Projeto: Força de Senha
+        #55: Projeto: Clima em Tempo Real (com API)
+        #56: Projeto: Drag & Drop
+        #57: Projeto: Galeria de Fotos com Lightbox
+        #58: Projeto: Jogo da Velha
+    </pre>
+
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
