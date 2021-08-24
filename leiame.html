@@ -269,8 +269,61 @@
 
 
         #26: Propriedades padrão do evento
+            <strong>prevent default;</strong>
+
+            $j(obj).bind('click', function(e){
+                e.preventDefault();
+            })
+
+            <div class="div26" name="div26">
+                <form action="#div26">
+                    <input type="text" class="conteudo">
+                    <button>enviar</button>
+                    texto digitado: <input type="text" class="div26texto bd">
+                </form>
+                <div class="hoverAqui bg-vermelho">HOVER AQUI</div>
+            </div>
+            <style>
+                .bd {border: 1px solid #000;}
+            </style>
+
         #27: Eventos de Browser
+            scroll
+    </pre>
+            <div class="div27">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed corrupti nihil doloremque vero cupiditate nesciunt voluptate, libero asperiores reiciendis sapiente architecto esse accusantium recusandae, distinctio numquam reprehenderit vel molestias.
+            </div>
+            <style>
+                .div27 {
+                    border: 1px solid #000;
+                    width: 300px;
+                    height: 100px;
+                    overflow-y: scroll;
+                    line-height: 200%;
+                }
+            </style>
+
+    <pre>
+
         #28: Eventos de Formulário
+            <div class="div28" name="div28">
+                <form action="#div28">
+                    nome: <input type="text" name='nome'>
+
+                    email: <input type="text" name='email'>
+
+                    idade: <select name="idade" id="">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                    </select>
+
+                    <button>enviar</button>
+                </form>
+
+            </div>
+
         #29: Eventos de Teclado
         #30: Eventos de Mouse
         #31: O que são Efeitos?

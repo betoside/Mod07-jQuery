@@ -198,32 +198,77 @@ $j(function(){
       $j(this).parent().toggleClass("bg-vermelho");
     });
 
-        // #23: Eventos Auxiliadores
-        $j('.div23').hover(
-            function() {
-                $j(this).addClass('bg-vermelho');
-            },
-            function() {
-                $j(this).removeClass('bg-vermelho');
-            }
-        );
-        $j('.div231').hover(
-            function() {
-                $j(this).toggleClass('bg-vermelho');
-            }
-        );
+    // #23: Eventos Auxiliadores
+    $j('.div23').hover(
+        function() {
+            $j(this).addClass('bg-vermelho');
+        },
+        function() {
+            $j(this).removeClass('bg-vermelho');
+        }
+    );
+    $j('.div231').hover(
+        function() {
+            $j(this).toggleClass('bg-vermelho');
+        }
+    );
 
-        // #24: Removendo Eventos
-        $j('.div24 .add').on('click',function(){
-            $j('.div24 .strong242').css('cursor','pointer');
-            $j('.div24 .strong242').bind('click', function(){
-                alert('Clicou')
-            });
+    // #24: Removendo Eventos
+    $j('.div24 .add').on('click',function(){
+        $j('.div24 .strong242').css('cursor','pointer');
+        $j('.div24 .strong242').bind('click', function(){
+            alert('Clicou')
         });
-        $j(".div24 .delete").on("click", function () {
-          $j(".div24 .strong242").unbind("click");
-          $j(".div24 .strong242").css("cursor", "default");
-        });
+    });
+    $j(".div24 .delete").on("click", function () {
+        $j(".div24 .strong242").unbind("click");
+        $j(".div24 .strong242").css("cursor", "default");
+    });
+
+    // #26: Propriedades padrão do evento
+    function eventoDoBotao(e) {
+        e.preventDefault();
+        alert(e.type);
+        if ($j('.div26 .conteudo').val() != "") {            
+            $j('.div26 .div26texto').val($j('.div26 .conteudo').val());
+        }
+    }
+    $j('.div26 button').bind('click', eventoDoBotao);
+    $j('.div26 .hoverAqui').bind('mouseover', eventoDoBotao);
+
+    // #27: Eventos de Browser
+    $j('.div27').bind('scroll', function() {
+        console.log('scrolling div');
+    });
+    $j(window).bind('scroll', function() {
+        console.log('scrolling tela');
+    });
+    $j(window).bind('resize', function() {
+        console.log('mudou o tamanho da tela');
+    })
+
+    // #28: Eventos de Formulário
+    $j('.div28 form').bind('submit', function(e) {
+        e.preventDefault();
+        console.log(e.type, 'form enviado');
+    })
+
+    $j('.div28 form input').bind('focus', function(e) {
+        e.preventDefault();
+        console.log(e.type, 'name:', $j(this).attr('name'));
+    })
+
+    $j('.div28 form select').bind('change', function(e) {
+        e.preventDefault();
+        console.log(e.type, 'opcao escolhida:', $j(this).val());
+        funciona em 
+        // radio 
+        // checkbox 
+        // select
+    })
+
+
+
 
 });
 
