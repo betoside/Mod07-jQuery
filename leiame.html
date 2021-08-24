@@ -323,17 +323,109 @@
                 </form>
 
             </div>
-
+    </pre>
         #29: Eventos de Teclado
+            <div class="div29">
+                <input type="text">
+                <div class="chat">
+
+                </div>
+                <style>
+                    .chat {
+                        width: 300px;
+                        height: 100px;
+                        overflow-y: scroll;
+                        border: 1px solid #000;
+                    }
+                </style>
+
+            </div>
+            <br><br>
+
         #30: Eventos de Mouse
+            <div class="div30">
+                div30
+            </div>
+            <style>
+                .div30 {
+                    width: 150px;padding: 20px;
+                    background: #f00;
+                    color: #fff;text-align: center;
+                }
+            </style>
+            <br><br>
+
+
         #31: O que são Efeitos?
+            <div class="div31">
+
+
+            </div>
+
+
+<pre>
         #32: Elemento aparecer/desaparecer
+            <div class="div32">
+                <button>esconder</button>
+                <div class="div321"></div>
+            </div>
+            <style>
+                .div321 {width: 50px;height: 50px;background: #0f0;}
+            </style>
+
         #33: Efeitos de Fade
+            <div class="div33">
+                <button class="fade">fadeToggle</button>
+                <button class="fadeTo">fadeTo</button> <input type="text" placeholder="entre 0 e 1">
+                <div class="div331"></div>
+            </div>
+            <style>
+                .div331 {width: 50px;height: 50px;background: #0f0;}
+            </style>
+
         #34: Efeitos de Deslizamento (Slide)
+            <div class="div34">
+                <button>action!</button>
+                <div class="div341"></div>
+            </div>
+            <style>
+                .div341 {width: 150px;height: 200px;background: #00f;}
+            </style>
+
         #35: Animações: Como usar o Animate
+            <div class="div35">
+                <button class="go">Go!</button><button class="back">Back!</button>
+                <div class="alvo">
+
+                </div>
+                <style>
+                    .alvo {width: 150px;height: 150px;background: #f00;}
+                </style>
+            </div>
+
         #36: Animações: Eventos no Animate
+
+            {
+            duration: 400,
+            step:function() {
+            console.log('step');
+            },
+            complete: function() {
+                console.log('animacao (back) finalizada');
+            },
+            start: function() {
+                console.log('animacao (back) comecou');
+            }
+
+
         #37: FAQ: Como parar uma animação no meio?
+            $j(obj).stop();
+
         #38: FAQ: Somar propriedades na animação
+
+            'margin-left' : '+=50'
+            'margin-left' : '-=50'
+            
         #39: O que é AJAX?
         #40: Conceitos importantes de AJAX
         #41: Monitorar Requisições AJAX

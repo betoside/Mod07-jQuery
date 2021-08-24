@@ -261,11 +261,121 @@ $j(function(){
     $j('.div28 form select').bind('change', function(e) {
         e.preventDefault();
         console.log(e.type, 'opcao escolhida:', $j(this).val());
-        funciona em 
+        // funciona em 
         // radio 
         // checkbox 
         // select
     })
+
+    // #29: Eventos de Teclado
+    $j('.div29 input').bind('keydown', function(e) {
+        console.log(e.type, 'apertou a tecla', ':'+e.keyCode);
+        if (e.keyCode == 13) {
+            txt = $j(this).val();
+            console.log(txt);
+            $j('.div29 .chat').append(txt + '<br>');
+        }
+
+    })
+    $j('.div29 input').bind('keyup', function(e) {
+        console.log(e.type, 'soltou a tecla', ':'+e.keyCode);
+    })
+
+    // #30: Eventos de Mouse
+    $j('.div30').bind('mousedown', function(e) {
+        console.log(e.type, 'apertou o mouse');
+        $j(this).html('apertou o mouse');
+    })
+    $j('.div30').bind('mouseup', function(e) {
+        console.log(e.type, 'soltou o mouse');
+        $j(this).html('soltou o mouse');
+    })
+    // $j('.div30').bind('mousemove', function(e) {
+    //     console.log(e.type, 'soltou o mouse');
+    //     $j(this).html('moveu o mouse');
+    // })
+    $j('.div30').bind('mouseover', function(e) {
+        console.log(e.type, 'mouse está em cima da área');
+        $j(this).html('mouse está em cima da área');
+    })
+    $j('.div30').bind('mouseout', function(e) {
+        console.log(e.type, 'mouse saiu da área');
+        $j(this).html('mouse saiu da área');
+    })
+    $j('.div30').bind('dblclick', function(e) {
+        console.log(e.type, 'double, deu dois clicks');
+        $j(this).html('double, deu dois clicks');
+    })
+
+    // #31: O que são Efeitos?
+
+    // #32: Elemento aparecer/desaparecer
+    $j('.div32 button').bind('click', function(e) {
+        $j(this).parent().find('div').toggle();
+    })
+
+    // #33: Efeitos de Fade
+    $j('.div33 .fade').bind('click', function(e) {
+        // $j(this).parent().find('div').fadeOut();
+        // $j(this).parent().find('div').fadeIn();
+        $j(this).parent().find('div').fadeToggle();
+    })
+    $j('.div33 .fadeTo').bind('click', function(e) {
+        valor = $j(this).parent().find('input').val()
+        console.log(valor);
+        if (valor != "") {
+            $j(this).parent().find('div').fadeTo('fast',valor);
+        }
+    })
+
+    // #34: Efeitos de Deslizamento (Slide)
+    $j('.div34 button').bind('click', function(e) {
+        // $j('.div34 .div341').slideUp();
+        // $j('.div34 .div341').slideDown();
+        $j('.div34 .div341').slideToggle();
+    })
+
+    // #35: Animações: Como usar o Animate
+    $j('.div35 .go').bind('click', function(e) {
+        $j('.div35 .alvo').animate({
+            'margin-left' : 100,
+            'margin-top' : 10,
+            'width' : 300,
+            'border-radius' : 100
+        }, {
+            duration: 400,
+            step:function() {
+              console.log('step');
+            },
+            complete: function() {
+                console.log('animacao (go) finalizada');
+            },
+            start: function() {
+                console.log('animacao (go) comecou');
+            }
+        });
+    })
+    $j('.div35 .back').bind('click', function(e) {
+        $j('.div35 .alvo').animate({
+            'margin-left' : 0,
+            'margin-top' : 0,
+            'width' : 150,
+            'border-radius' : 0
+        }, {
+            duration: 400,
+            step:function() {
+              console.log('step');
+            },
+            complete: function() {
+                console.log('animacao (back) finalizada');
+            },
+            start: function() {
+                console.log('animacao (back) comecou');
+            }
+        });
+    })
+
+
 
 
 
