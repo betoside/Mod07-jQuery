@@ -77,7 +77,87 @@ $j(function(){
     $j('.div12').find('h1').css('color','red');
     $j('.div12').find('h1').css('font-size','18px');
 
+    // #13: Guardando dados em um elemento
+    $j('.div13')
+    // < S [<div class="div13">] (1)
+    $j('.div13 h2')
+    // < S [<h2>] (1)
+    $j('.div13 input')
+    // < S [<input type="text">] (1)
+    $j('.div13 button')
+    // < S [<button>] (1)
+    $j('.div13 input').data('idade', 46)
+    // < S [<input type="text">] (1)
+    $j('.div13 input').data()
+    // < {idade: 46}
+    $j('.div13 input').val()
+    // < "alberto"
+    $j('.div13 input').val().length
+    // < 7
+    $j('.div13 input').data('qtdCaracteres', $j('.div13 input').val().length)
+    // < S [<input type="text">] (1)
+    $j('.div13 input').data('qtdCaracteres')
+    // < 7
+    console.log('ver o INSPECT');
 
+
+    // #14: Métodos do dia-a-dia
+    div14outro = $j.trim( $j('.div14 .texto').html() )
+    // < "Esse é um texto para exemplo"
+    console.log(div14outro);
+    // < "Esse é um texto para exemplo"
+
+    $j('.div14 li')
+    // < S [<li>, <li>, <li>] (3)
+    $j('.div14 li').each(function(){
+        console.log($j(this).html())
+    })
+    // [Log] item 1
+    // [Log] item 2
+    // [Log] item 3
+    // < S [<li>, <li>, <li>] (3)
+    // $j('.div14 li').each(
+    //     console.log($j(this).html())
+    // )
+    // TypeError: undefined is not an object (evaluating 't.createDocumentFragment')
+
+    div14idade = 46
+    // < 46
+    $j.type(div14idade)
+    // < "number"
+    div14nome = 'betao'
+    // < "betao"
+    $j.type(div14nome)
+    // < "string"
+    typeof div14idade
+    // < "number"
+    typeof div14nome
+    // < "string"
+    $j.isNumeric(div14idade)
+    // < true
+    // $j.isArray
+    // $j.isFunction
+    // $j.is ETC ...
+
+    // console.log('teste');
+
+    // #15: FAQ: Como saber se um elemento existe?
+    if( $j('.div15').length > 0 ){
+    console.log('existe')
+    } else {
+    console.log('nao existe')
+    }
+    //    [Log] existe
+
+    // #16: FAQ: Saber se elemento tem uma classe
+    if( $j('.div16 input').hasClass('qqCoisa16') ){
+        console.log('tem CLASS')
+       }
+       else
+          {
+        console.log('nao tem CLASS')
+       }
+    //    [Log] nao tem CLASS
 
     
 
