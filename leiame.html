@@ -160,9 +160,7 @@
                     Esse é um texto para exemplo
                 </div>
                 <ul>
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
+                    <li>item 1</li><li>item 2</li><li>item 3</li>
                 </ul>
             </div>
 
@@ -194,13 +192,82 @@
             </div>
             
         #18: FAQ: Pegar item selecionado de SELECT
+        <div class="div18">
+            <select name="" id="">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+            </select>
+            selecionou: <input type="text">
+            <button>verificar</button>
+        </div>
+        
         #19: FAQ: Alterar 3o elemento de lista
+        <div class="div19">
+            <ul>
+                <li>item 19 1</li><li>item 19 2</li><li>item 19 3</li><li>item 19 4</li><li>item 19 5</li>
+            </ul>
+            digite um conteudo para o item 3<input type="text">
+            <button>alterar</button>
+        </div>
+
         #20: FAQ: Pegar elemento nativo
+            <div class="div20">
+                <ul>
+                    <li>item 20 1</li><li>item 20 2</li><li>item 20 3</li>
+                </ul>
+                > $j('.div20 ul li').eq(1)[0]
+                <!-- <li>item 20 2</li> -->
+            </div>
+
         #21: O que é um Evento?
+
         #22: Definindo Eventos em Elementos DOM
+            <div class="div22">
+                exemplo clássico: um BUTTON <button>botão</button> : CLICK
+            </div>
+            <style>
+                .bg-vermelho { background: #f00; }
+                .cursor { cursor: default ;}
+            </style>
+
         #23: Eventos Auxiliadores
+            <div class="div23">
+                HOVER, muda a class
+            </div>
+            <div class="div231">
+                HOVER + ToggleClass, muda a class
+            </div>
+            
         #24: Removendo Eventos
+            <div class="div24">
+                remover, adicionar eventos de varias formas diferentes.
+
+                <strong class="div241">
+                    $j(this).click(function(){
+
+                    });
+                </strong>
+                <strong class="strong242 bg-vermelho">
+                    $j(this).bind('click', function(){
+                        + usado
+                    });
+                </strong>
+                <button class='add'>adicionar evento click</button> <button class="delete">retirar evento click</button>
+                <strong class="div243">
+                    $j(this).on('click', function(){
+                        
+                    });
+                </strong>
+
+            </div>
+            
         #25: Acionamento Falso de Eventos
+            $j('objeto').trigger('click')
+            exemplo: checkbox selecionar todos
+
+
         #26: Propriedades padrão do evento
         #27: Eventos de Browser
         #28: Eventos de Formulário

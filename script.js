@@ -159,7 +159,71 @@ $j(function(){
        }
     //    [Log] nao tem CLASS
 
-    
+    // #17: FAQ: Ativar/Desativar um elemento de form
+    $j('.div17 input[type=text]').attr('disable', 'disabled')
+    // < S [<input type="text">] (1)
+    $j('.div17 input[type=text]').attr('disabled', 'disabled')
+    // < S [<input type="text">] (1)
+
+    $j('.div17 input[type=checkbox]').prop('checked', true);
+    // < S [<input type="checkbox">] (1)
+    $j('.div17 input[type=checkbox]').prop('checked', false);
+    // < S [<input type="checkbox">] (1)
+
+    // #18: FAQ: Pegar item selecionado de SELECT
+    $j('.div18 button').click(function(){
+        //console.log('hey')
+        $j('.div18 input').val($j('.div18 select').val())
+    })
+
+    // #19: FAQ: Alterar 3o elemento de lista
+    $j(".div19 button").click(function () {
+      if ($j(".div19 input").val() != "") {
+        $j(".div19 li").eq(2).html($j(".div19 input").val()).css('color','blue');
+      } else {
+        $j(".div19 li").eq(2).text("Digite alguma coisa").css('color','red');
+      }
+    });
+
+
+    // #20: FAQ: Pegar elemento nativo
+    $j('.div20 ul li').eq(1)[0];
+    console.log($j('.div20 ul li').eq(1)[0]);
+    // <li>item 20 2</li>
+        
+    // #22: Definindo Eventos em Elementos DOM
+    $j(".div22 button").click(function () {
+      alert("clicou");
+      console.log($j(this).parent());
+      $j(this).parent().toggleClass("bg-vermelho");
+    });
+
+        // #23: Eventos Auxiliadores
+        $j('.div23').hover(
+            function() {
+                $j(this).addClass('bg-vermelho');
+            },
+            function() {
+                $j(this).removeClass('bg-vermelho');
+            }
+        );
+        $j('.div231').hover(
+            function() {
+                $j(this).toggleClass('bg-vermelho');
+            }
+        );
+
+        // #24: Removendo Eventos
+        $j('.div24 .add').on('click',function(){
+            $j('.div24 .strong242').css('cursor','pointer');
+            $j('.div24 .strong242').bind('click', function(){
+                alert('Clicou')
+            });
+        });
+        $j(".div24 .delete").on("click", function () {
+          $j(".div24 .strong242").unbind("click");
+          $j(".div24 .strong242").css("cursor", "default");
+        });
 
 });
 
