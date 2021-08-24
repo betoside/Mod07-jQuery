@@ -69,6 +69,14 @@ $j(function(){
     console.log('irmao closest site', $j('.irmao').closest('.site'));
     console.log('irmao to rodape', $j('.irmao').closest('.site').find('.rodape'));
 
+    // #12: CSS, Styling e Dimensões
+    $j('.div12').find('h1').addClass('fundo-vermelho');
+    console.log('verificar class', $j('.div12').find('h1').hasClass('fundo-vermelho'));
+    $j('.div12').find('h1').removeClass('fundo-vermelho');
+    console.log('verificar class', $j('.div12').find('h1').hasClass('fundo-vermelho'));
+    $j('.div12').find('h1').css('color','red');
+    $j('.div12').find('h1').css('font-size','18px');
+
 
 
     
